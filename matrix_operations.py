@@ -9,23 +9,32 @@ for i in range (a):
         print("Enter Element No:",i,j)
         x[i][j] = int(input())
 print(np.matrix(x))
-dict={1 :'Determinant',2 :'Rank',3 :'Matrix power',4:'Inverse',5: 'Eigen values',6:'Frobenius norm',7:'Transpose',8:'Trace'}
+dict={1 :'Determinant',2 :'Rank',3 :'Matrix power',4:'Inverse',5: 'Eigen values',6:'Frobenius norm',7:'Transpose',8:'Trace',9:'program is end'}
 print(dict)
 d=input("choose the required opearion from dictionary:")
 if d==1:
 	if a==b:
 		print("Determinant of the matrix:",np.linalg.det(x))
 	else:
-		print("please enter square matrix for determinent")
+		print("please enter equal number of rows and columns")
 elif d==2:
-	  print("rank of matrix:",np.linalg.matrix_rank(x))
+	print("rank of matrix:",np.linalg.matrix_rank(x))
 elif d==3:
 	p=input("enter power:")
-	print("Power of matrix:",np.linalg.matrix_power(x,p))
+	if a==b:
+		print("Power of matrix:",np.linalg.matrix_power(x,p))
+	else:
+		print("please enter equal number of rows and columns")
 elif d==4:
-	print("Inverse of matrix:",np.linalg.inv(x))
+	if a==b:
+		print("Inverse of matrix:",np.linalg.inv(x))
+	else:
+		print("please enter equal number of rows and columns")
 elif d==5:
-	print("Eigen values of matrix:",np.linalg.eigvals(x))
+	if a==b:
+		print("Eigen values of matrix:",np.linalg.eigvals(x))
+	else:
+		print("please enter equal number of rows and columns")
 elif d==6:
 	print("Frobenius norm of matrix:",np.linalg.norm(x))
 elif d==7:
@@ -34,8 +43,7 @@ elif d==8:
 	if a==b:
 		print("Trace of matrix:",np.trace(x))
 	else:
-		print("please enter square matrix")
-
+		print("please enter equal number of rows and columns")	
 
 	
 
